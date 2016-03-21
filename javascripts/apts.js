@@ -1,6 +1,6 @@
 // JavaScript Document
 
-$.getJSON('apt.json', function(data) {
+$.getJSON('apts.json', function(data) {
 		var output = '<ul>';
 		$.each(data, function(key, val) {
 				output += '<li>' + val.id +'</li>';
