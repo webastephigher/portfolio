@@ -1,0 +1,12 @@
+[
+	{
+		"id"	:	"2401penn",
+		"name"	:	"2401 Pennsylvania Ave",
+		"rent"	:	"3300",
+		"pics"	:	[
+					"2401penn_apartment.jpg",
+					"2401penn_living_room.jpg",
+					"2401penn_kitchen.jpg"
+				]
+	}
+]
