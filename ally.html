@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ally Financial</title>
+
+	<link rel="stylesheet" href="ally.css">
+	<link rel="stylesheet" href="modal.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+	<script src="modal.js"></script>
+
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+	<script>
+	$(function() {
+		$( "#tabs" ).tabs();
+	});
+	</script>
+    
+    <style>
+    	.main_div {
+			 width:650px;
+			 padding-left:100px;
+			 padding-right:25px;
+		}
+		#bank_title {
+			 color:#650360;
+			 font-size:36pt;
+			 font-family:Arial, Helvetica, sans-serif;
+		}
+		ul, li { margin-left:10px; }
+		#ami {
+			background-color:#bbd8c4;
+			margin-top:25px;
+			padding:10px 150px 10px 10px;
+		}
+		ami_title {
+			color:#650360;
+			font-size:16pt;
+			font-weight:bold;
+		}
+		.login_bg {
+			background-color:#650360;
+			color:white;
+			width:250px;
+			padding:10px 0px;
+		}
+    </style>
+</head>
+<body style="font-size:10pt;">
+  <header class="header-bar">
+    <img src="piggy.gif" style="padding-top:3px;">
+    <bank>U R Bank</bank>
+    <a class="header" href="#">home</a>
+    <a class="header" href="#">employees</a>
+    <a class="header" href="#">company</a>
+    <a class="header" href="#">services</a>
+    <a class="header" href="#">contact</a>
+  </header>
+  
+  <table>
+  <tr>
+  <td>
+<div class="main_div">
+  <scan id="bank_title">Best Beank Ever!</scan>
+
+  <p style="padding-bottom:20px;">
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
+  </p>
+
+
+<b>Reasons We're Awesome:</b>
+<ul>
+<li>Lorem ipsum dolor sit amet.</li>
+<li>Aliquam tincidunt mauris eu risus.</li>
+<li>Lorem ipsum dolor sit amet.</li>
+<li>Lorem ipsum dolor sit amet.</li>
+<li>Vestibulum auctor dapibus neque.</li>
+</ul>
+
+  <div id="ami">
+    <ami_title>Awesome Mobile Info</ami_title>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec</p>
+  </div>
+
+<img src="phone.gif" style="position:absolute; top:250px; left:650px;">
+<br><br>
+<br><br>
+<scan style="font-size:20pt;">Rates | Check Them Out!</scan>
+<table cellpadding="0" cellspacing="0" width="100%">
+<tr style="font-size:8pt;"><td></td><td>Annual Percentage Yield</td><td>Est Earning for 1 Year</td></tr>
+<tr style="background-color:#bbd8c4;"><td>UR Bank</td><td>0.87%</td><td>$436.89</td></tr>
+<tr style="background-color:#ddebe1"><td>Big Guy Financial</td><td>0.75%</td><td>$376.41</td></tr>
+<tr style="background-color:#bbd8c4;"><td>Dewey, Cheatam & Howe</td><td>0.01%</td><td>$5.00</td></tr>
+<tr style="background-color:#ddebe1;"><td>First Onion</td><td>0.01%</td><td>$5.00</td></tr>
+<tr style="background-color:#bbd8c4;"><td>Bank of Everywhere</td><td>0.01%</td><td>$5.00</td></tr>
+<tr style="font-size:8pt;"><td></td><td></td><td>*Based on $50,000 deposit</td></tr>
+</table>
+</div>
+</td>
+<td valign="top">
+  
+  <button type="button" class="login_bg"><a id='login' href='#' style="color:white">Login</a></button>
+
+
+<div id="tabs" style="width:250px; border:0px solid white !important; background:#ffffff !important;">
+	<ul>
+		<li><a href="#tabs-1" style="background-color:#f5f5f5">News</a></li>
+		<li><a href="#tabs-2" style="background-color:#ddebe1">Archive</a></li>
+	</ul>
+	<div id="tabs-1" style="background-color:#f5f5f5">
+		<p>Lorem ipsum dolor<br><br>
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis</p>
+		<p>Lorem ipsum dolor<br><br>
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis</p>
+		<p>Lorem ipsum dolor<br><br>
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis </p>
+	</div>
+	<div id="tabs-2" style="background-color:#ddebe1">
+		<p>Lorem ipsum dolor</p>
+		<p>Lorem ipsum dolor</p>
+		<p>Lorem ipsum dolor</p>
+		<p>Lorem ipsum dolor</p>
+		<p>Lorem ipsum dolor</p>
+		<p>Lorem ipsum dolor</p>
+		<p>Lorem ipsum dolor</p>
+		<p>Lorem ipsum dolor</p>
+	</div>
+</div>
+</div>
+</td></tr></table>
+  <footer class="footer-bar">
+    &copy; UR Bank
+    <a class="footer" href="#">home</a>
+    <a class="footer" href="#">employees</a>
+    <a class="footer" href="#">company</a>
+    <a class="footer" href="#">services</a>
+    <a class="footer" href="#">contact</a>
+  </footer>
+</body>
+</html>
