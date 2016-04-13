@@ -86,6 +86,7 @@ a.footer:hover {
 	padding-right:10px;
 }
 
+
 bank {
 	 color:#1c264a;
 	 font-family:'myriad pro';
@@ -93,3 +94,30 @@ bank {
 	 padding-left:20px;
 	 vertical-align:top;
 }
+    	.main_div {
+			 width:650px;
+			 padding-left:100px;
+			 padding-right:25px;
+		}
+		#bank_title {
+			 color:#650360;
+			 font-size:36pt;
+			 font-family:Arial, Helvetica, sans-serif;
+		}
+		ul, li { margin-left:10px; }
+		#ami {
+			background-color:#bbd8c4;
+			margin-top:25px;
+			padding:10px 150px 10px 10px;
+		}
+		ami_title {
+			color:#650360;
+			font-size:16pt;
+			font-weight:bold;
+		}
+		.login_bg {
+			background-color:#650360;
+			color:white;
+			width:250px;
+			padding:10px 0px;
+		}
