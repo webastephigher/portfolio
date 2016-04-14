@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,53 +6,44 @@
 
 	<link rel="stylesheet" href="stylesheets/ally.css">
 	<link rel="stylesheet" href="stylesheets/modal.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
 	<script src="javascripts/modal.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     
 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	<link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
-	
 	<script>
 	$(function() {
 		$( "#tabs" ).tabs();
 	});
 	</script>
-	
-	<style>
-	.odd {background-color:#bbd8c4;}
-	.even {background-color:#ddebe1}
-	</style>
 </head>
 <body style="font-size:10pt;">
-<ul class="topnav" style="padding-right:100px;">
-  <img src="images/piggy.gif" style="padding-top:3px; padding-left:100px;"><bank>U R Bank</bank>
-  <li><a href="#contact">contact</a></li>
-  <li><a href="#services">services</a></li>
-  <li><a href="#company">company</a></li>
-  <li><a href="#employees">employees</a></li>
-  <li><a class="active" href="#home">home</a></li>
-  <li class="icon">
-    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
-  </li>
-</ul>
-
+  <header class="header-bar">
+    <img src="images/piggy.gif" style="padding-top:3px;">
+    <bank>U R Bank</bank>
+    <a class="header" href="#">home</a>
+    <a class="header" href="#">employees</a>
+    <a class="header" href="#">company</a>
+    <a class="header" href="#">services</a>
+    <a class="header" href="#">contact</a>
+  </header>
   
   <table>
   <tr>
   <td>
 <div class="main_div">
-  <scan id="bank_title">Best Bank Ever!!!</scan>
+  <scan id="bank_title">Best Bank Ever!</scan>
 
   <p style="padding-bottom:20px;">
 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
   </p>
 
 
-<b>Reasons Were Awesome:</b>
+<b>Reasons We're Awesome:</b>
 <ul>
 <li>Lorem ipsum dolor sit amet.</li>
 <li>Aliquam tincidunt mauris eu risus.</li>
@@ -70,6 +62,37 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac tu
 <br><br>
 <scan style="font-size:20pt;">Rates | Check Them Out!</scan>
 <div id="id01"></div>
+
+<script>
+var xmlhttp = new XMLHttpRequest();
+var url = "http://whatsonyourscreen.com/code-test.json";
+
+xmlhttp.onreadystatechange=function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        myFunction(xmlhttp.responseText);
+    }
+}
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+function myFunction(response) {
+    var arr = JSON.parse(response);
+    var i;
+    var out = "<table cellpadding=0 cellspacing=0 width=100%><tr style=font-size:8pt;><td></td><td>Annual Percentage Yield</td><td>Est Earning for 1 Year</td></tr>";
+
+    for(i = 0; i < arr.length; i++) {
+        out += "<tr><td>" + 
+        arr[i].name +
+        "</td><td>" +
+        arr[i].apy +
+        "</td><td>$" +
+        arr[i].earnings +
+        "</td></tr>";
+    }
+    out += "<tr style=font-size:8pt;><td></td><td></td><td>*Based on $50,000 deposit</td></tr></table>";
+    document.getElementById("id01").innerHTML = out;
+}
+</script>
 
 </div>
 </td>
@@ -112,6 +135,5 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac tu
     <a class="footer" href="#">services</a>
     <a class="footer" href="#">contact</a>
   </footer>
-  
 </body>
 </html>
